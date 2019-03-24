@@ -8,6 +8,7 @@ const login = r => require.ensure([], () => r(require('@/pages/login')), 'login'
 const register = r => require.ensure([], () => r(require('@/pages/register')), 'register')
 const wheel = r => require.ensure([], () => r(require('@/pages/activity/wheel')), 'wheel')
 const everyday = r => require.ensure([], () => r(require('@/pages/activity/everyday')), 'everyday')
+const signin = r => require.ensure([], () => r(require('@/pages/activity/signin')), 'everyday')
 
 const routes = [{
     path: '/',
@@ -39,6 +40,12 @@ const routes = [{
     component: everyday,
     meta: {
         title: '每日狂欢'
+    }
+}, {
+    path: '/sign_in',
+    component: signin,
+    meta: {
+        title: '每日签到'
     }
 }]
 

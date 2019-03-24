@@ -35,9 +35,14 @@
   border: none;
   border-radius: 15px;
   font-size: 13px;
+  outline: none;
+  transition: all .2s;
   &.primary {
     background-color: $red1;
     color: $white;
+    &:active {
+      opacity: .6;
+    }
     &.is-plain {
       background-color: transparent;
       border: 1px solid $red1;
