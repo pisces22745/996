@@ -1,0 +1,54 @@
+@import "../style/vars";
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both;
+  height: 0;
+}
+
+.img-wrapper {
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.button {
+  display: inline-block;
+  padding: 0 12px;
+  line-height: 30px;
+  -webkit-appearance: none;
+  border: none;
+  border-radius: 15px;
+  font-size: 13px;
+  &.primary {
+    background-color: $red1;
+    color: $white;
+    &.is-plain {
+      background-color: transparent;
+      border: 1px solid $red1;
+      color: $red1;
+    }
+  }
+  &.disabled {
+    opacity: 0.5;
+  }
+  &.gray {
+    background-color: $black6;
+    color: $white;
+  }
+}
