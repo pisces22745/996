@@ -10,6 +10,7 @@ const wheel = r => require.ensure([], () => r(require('@/pages/activity/wheel'))
 const everyday = r => require.ensure([], () => r(require('@/pages/activity/everyday')), 'everyday')
 const signin = r => require.ensure([], () => r(require('@/pages/activity/signin')), 'signin')
 const my = r => require.ensure([], () => r(require('@/pages/my')), 'my')
+const order = r => require.ensure([], () => r(require('@/pages/my/order')), 'order')
 
 const routes = [{
     path: '/',
@@ -53,6 +54,12 @@ const routes = [{
     component: my,
     meta: {
         title: '我的'
+    }
+},{
+    path: '/order',
+    component: order,
+    meta: {
+        title: '我的订单'
     }
 }]
 
