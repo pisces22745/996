@@ -23,7 +23,7 @@
                     </div>
                 </div>
             </div>
-            <!--<div class="lottery_ticket">您还有： <span class="highlight">{{ lottery_ticket}}</span>次抽奖机会</div>-->
+            <!--<div class="lottery_ticket">您还有： <span class="yellow-highlight">{{ lottery_ticket}}</span>次抽奖机会</div>-->
         </div>
         <div class="main">
             <div class="main-bg"></div>

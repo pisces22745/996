@@ -1,6 +1,6 @@
 <template>
     <div class="good-list">
-        <h1 v-if="title">{{title}}</h1>
+        <h1 v-if="title" :class="{dark}">{{title}}</h1>
         <ul class="clearfix">
             <li v-for="(item,index) in goodList" :key="index" class="clearfix">
                 <div class="inner">
@@ -19,13 +19,14 @@
 </template>
 
 <script>
-    export default {
-        name: 'Goods',
-        props: {
-            title: String,
-            goodList: Array
-        }
+export default {
+    name: 'Goods',
+    props: {
+        title: String,
+        goodList: Array,
+        dark: Boolean
     }
+}
 </script>
 
 <style lang="scss">
@@ -33,41 +34,56 @@
 
     .good-list {
         padding: 0 5px;
+
         h1 {
             margin: 15px 0;
             text-align: center;
             color: $yellow6;
             font-size: 17px;
+
+            &.dark {
+                color: $black3;
+                &::before, &::after {
+                    background-image: url("../assets/img/icon_hot_sale2.png");
+                }
+            }
+
             &::before, &::after {
                 content: '';
                 display: inline-block;
                 width: 49px;
                 height: 12px;
-                background: url("../assets/img/icon_hot_sale.png") no-repeat center center;
-                -webkit-background-size: 100%;
+                background-image: url("../assets/img/icon_hot_sale1.png");
                 background-size: 100%;
             }
+
             &::before {
                 transform: rotate(-180deg);
                 margin-right: 10px;
             }
+
             &::after {
                 margin-left: 10px;
             }
         }
+
         ul {
             li {
                 box-sizing: border-box;
                 width: 50%;
                 float: left;
                 padding: 5px;
+
                 .inner {
                     background-color: $white;
+
                     .img-wrapper {
                         height: 140px;
                     }
+
                     .item-bottom {
                         padding: 10px;
+
                         .desc {
                             font-size: 13px;
                             line-height: 1.3;
@@ -78,8 +94,10 @@
                             -webkit-line-clamp: 2;
                             -webkit-box-orient: vertical;
                         }
+
                         .status {
                             margin: 10px 0;
+
                             span {
                                 padding: 4px;
                                 color: $yellow1;
@@ -87,6 +105,7 @@
                                 font-size: 9px;
                             }
                         }
+
                         .price {
                             font-size: 16px;
                             color: $red1;

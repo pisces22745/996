@@ -23,7 +23,7 @@
                             <div class="participate clearfix">
                                 <div class="fl">
                                     <span>已参与</span>
-                                    <span class="highlight">{{item.canyurenshu}}</span>
+                                    <span class="yellow-highlight">{{item.canyurenshu}}</span>
                                 </div>
                                 <button class="button fr"
                                         :class="{0:'primary',1:'primary disabled',2:'primary',3:'gray'}[item.status]"
@@ -72,7 +72,7 @@
         name: 'everyday',
         data() {
             return {
-                banner: 'https://img5.duitang.com/uploads/item/201303/09/20130309193622_XYZyt.jpeg',
+                banner: 'http://pic13.nipic.com/20110306/2804945_123841419000_2.jpg',
                 current: '10:00',
                 labels: [
                     '10:00',

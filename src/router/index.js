@@ -8,7 +8,8 @@ const login = r => require.ensure([], () => r(require('@/pages/login')), 'login'
 const register = r => require.ensure([], () => r(require('@/pages/register')), 'register')
 const wheel = r => require.ensure([], () => r(require('@/pages/activity/wheel')), 'wheel')
 const everyday = r => require.ensure([], () => r(require('@/pages/activity/everyday')), 'everyday')
-const signin = r => require.ensure([], () => r(require('@/pages/activity/signin')), 'everyday')
+const signin = r => require.ensure([], () => r(require('@/pages/activity/signin')), 'signin')
+const my = r => require.ensure([], () => r(require('@/pages/my')), 'my')
 
 const routes = [{
     path: '/',
@@ -46,6 +47,12 @@ const routes = [{
     component: signin,
     meta: {
         title: '每日签到'
+    }
+}, {
+    path: '/my',
+    component: my,
+    meta: {
+        title: '我的'
     }
 }]
 
