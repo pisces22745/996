@@ -28,7 +28,7 @@
                                 <button class="button fr"
                                         :class="{0:'primary',1:'primary disabled',2:'primary',3:'gray'}[item.status]"
                                         @click="pay">
-                                    {{{0: '立即支付',1:'已参与',2:'去兑奖',3:'谢谢参与'}[item.status]}}
+                                    {{{0: '立即参与',1:'已参与',2:'去兑奖',3:'谢谢参与'}[item.status]}}
                                 </button>
                             </div>
                         </div>
@@ -85,38 +85,38 @@
                     '17:00',
                 ],
                 activityList: [{
-                    img: 'https://img5.duitang.com/uploads/item/201303/09/20130309193622_XYZyt.jpeg',
+                    img: 'http://pic13.nipic.com/20110306/2804945_123841419000_2.jpg',
                     title: '狗狗衣服小型犬 太低情侣装礼服秋冬装猫咪通用款',
                     canyurenshu: 200,
                     status: 0
                 }, {
-                    img: 'https://img5.duitang.com/uploads/item/201303/09/20130309193622_XYZyt.jpeg',
+                    img: 'http://pic13.nipic.com/20110306/2804945_123841419000_2.jpg',
                     title: '狗狗衣服小型犬狗狗衣服小型犬狗狗衣服小型犬狗狗衣服小型犬狗狗衣服小型犬 太低情侣装礼服秋冬装猫咪通用款',
                     canyurenshu: 200,
-                    status: 1
+                    status: 0
                 }, {
-                    img: 'https://img5.duitang.com/uploads/item/201303/09/20130309193622_XYZyt.jpeg',
+                    img: 'http://pic13.nipic.com/20110306/2804945_123841419000_2.jpg',
                     title: '狗狗衣服小型犬 太低情侣装礼服秋冬装猫咪通用款',
                     canyurenshu: 200,
-                    status: 2
+                    status: 0
                 }, {
-                    img: 'https://img5.duitang.com/uploads/item/201303/09/20130309193622_XYZyt.jpeg',
+                    img: 'http://pic13.nipic.com/20110306/2804945_123841419000_2.jpg',
                     title: '狗狗衣服小型犬 太低情侣装礼服秋冬装猫咪通用款',
                     canyurenshu: 200,
-                    status: 3
+                    status: 0
                 }],
                 hotSaleList: [{
-                    img: 'https://img5.duitang.com/uploads/item/201303/09/20130309193622_XYZyt.jpeg',
+                    img: 'http://pic13.nipic.com/20110306/2804945_123841419000_2.jpg',
                     desc: '阿拉斯加雪橇犬简称阿拉斯加',
                     status: 0,
                     price: 138.8
                 }, {
-                    img: 'https://img5.duitang.com/uploads/item/201303/09/20130309193622_XYZyt.jpeg',
+                    img: 'http://pic13.nipic.com/20110306/2804945_123841419000_2.jpg',
                     desc: '阿拉斯加雪橇犬简称阿拉斯加阿拉斯加雪橇犬简称阿拉斯加阿拉斯加雪橇犬简称阿拉斯加',
                     status: 0,
                     price: 138.8
                 }, {
-                    img: 'https://img5.duitang.com/uploads/item/201303/09/20130309193622_XYZyt.jpeg',
+                    img: 'http://pic13.nipic.com/20110306/2804945_123841419000_2.jpg',
                     desc: '阿拉斯加雪橇犬简称阿拉斯加',
                     status: 0,
                     price: 138.8
