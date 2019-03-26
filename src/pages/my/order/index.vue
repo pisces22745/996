@@ -1,6 +1,6 @@
 <template>
     <div class="my-order">
-        <appHead :title="'我的订单'"></appHead>
+        <!--<appHead :title="'我的订单'"></appHead>-->
         <div class="bar">
             <cube-tab-bar
                     v-model="selectedLabelSlots"
@@ -47,9 +47,9 @@
 </template>
 
 <script>
-    import appHead from '@/components/appHead'
+    // import appHead from '@/components/appHead.vue'
     export default {
-        name: "order",
+        name: "index",
         data () {
             return {
                 banner: 'http://pic13.nipic.com/20110306/2804945_123841419000_2.jpg',
@@ -70,24 +70,23 @@
             }
         },
         methods: {
-          // clickHandler (label) {
-              // if you clicked home tab, then print 'Home'
-              // console.log(label)
-          // }
+            // clickHandler (label) {
+            // if you clicked home tab, then print 'Home'
+            // console.log(label)
+            // }
         },
         components:{
-            appHead
+            // appHead
         }
     }
 </script>
 
-<style lang="scss">
-    @import "../../style/vars";
+<style lang="scss" scoped>
+    @import "../../../style/vars";
     .my-order{
         .bar{
             padding: 10px 13px 0 13px;
             .cube-tab{
-                /*margin: 0 20px;*/
                 padding-bottom:12px ;
                 font-size: 15px;
                 color: $black11;

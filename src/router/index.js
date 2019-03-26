@@ -11,7 +11,8 @@ const everyday = r => require.ensure([], () => r(require('@/pages/activity/every
 const signin = r => require.ensure([], () => r(require('@/pages/activity/signin')), 'signin')
 const my = r => require.ensure([], () => r(require('@/pages/my')), 'my')
 const addressList = r => require.ensure([], () => r(require('@/pages/my/address')), 'addressList')
-const order = r => require.ensure([], () => r(require('@/pages/my/order')), 'order')
+const orderList = r => require.ensure([], () => r(require('@/pages/my/order')), 'orderList')
+const detail = r => require.ensure([], () => r(require('@/pages/my/order/detail')), 'detail')
 
 const routes = [{
     path: '/',
@@ -56,15 +57,22 @@ const routes = [{
     meta: {
         title: '我的'
     }
-},{
+}, {
     path: '/order',
-    component: order,
+    component: orderList,
     meta: {
         title: '我的订单'
+
     }
 }, {
     path: '/address_list',
     component: addressList,
+    meta: {
+        title: '收货地址'
+    }
+},{
+    path: '/detail',
+    component: detail,
     meta: {
         title: '收货地址'
     }
