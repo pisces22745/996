@@ -13,6 +13,7 @@ const my = r => require.ensure([], () => r(require('@/pages/my')), 'my')
 const addressList = r => require.ensure([], () => r(require('@/pages/my/address')), 'addressList')
 const orderList = r => require.ensure([], () => r(require('@/pages/my/order')), 'orderList')
 const detail = r => require.ensure([], () => r(require('@/pages/my/order/detail')), 'detail')
+const prizeList = r => require.ensure([], () => r(require('@/pages/my/prize')), 'prizeList')
 
 const routes = [{
     path: '/',
@@ -75,6 +76,12 @@ const routes = [{
     component: detail,
     meta: {
         title: '收货地址'
+    }
+},{
+    path:'/prize_list',
+    component:prizeList,
+    meta:{
+        title:'奖品记录'
     }
 }]
 

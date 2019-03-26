@@ -26,7 +26,7 @@
                                     <span class="yellow-highlight">{{item.canyurenshu}}</span>
                                 </div>
                                 <button class="button fr"
-                                        :class="{0:'primary',1:'primary disabled',2:'primary',3:'gray'}[item.status]"
+                                        :class="{0:'danger',1:'danger disabled',2:'danger',3:'gray'}[item.status]"
                                         @click="pay">
                                     {{{0: '立即参与',1:'已参与',2:'去兑奖',3:'谢谢参与'}[item.status]}}
                                 </button>

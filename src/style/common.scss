@@ -1,6 +1,6 @@
 @import "../style/vars";
 
-body{
+body {
   background-color: $black7;
 }
 
@@ -34,30 +34,65 @@ body{
 .button {
   display: inline-block;
   padding: 0 12px;
-  line-height: 30px;
   -webkit-appearance: none;
   border: none;
   border-radius: 15px;
   font-size: 13px;
   outline: none;
   transition: all .2s;
-  &.primary {
+
+  &.xs {
+    height: 25px;
+    line-height: 25px;
+  }
+
+  &.sm {
+    height: 30px;
+    line-height: 30px;
+  }
+
+  &.md {
+    height: 35px;
+    line-height: 35px;
+  }
+
+  &.lg {
+    height: 40px;
+    line-height: 40px;
+  }
+
+  &.xl {
+    height: 50px;
+    line-height: 50px;
+  }
+
+  &.button-default {
+    background-color: $black6;
+    color: $white;
+
+    &.is-plain {
+      background-color: transparent;
+      border: 1px solid $black14;
+      color: $black3;
+    }
+  }
+
+  &.button-danger {
     background-color: $red1;
     color: $white;
+
     &:active {
       opacity: .6;
     }
+
     &.is-plain {
       background-color: transparent;
       border: 1px solid $red1;
       color: $red1;
     }
   }
+
   &.disabled {
     opacity: 0.5;
-  }
-  &.gray {
-    background-color: $black6;
-    color: $white;
   }
 }
