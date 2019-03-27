@@ -11,6 +11,7 @@ const everyday = r => require.ensure([], () => r(require('@/pages/activity/every
 const signin = r => require.ensure([], () => r(require('@/pages/activity/signin')), 'signin')
 const my = r => require.ensure([], () => r(require('@/pages/my')), 'my')
 const addressList = r => require.ensure([], () => r(require('@/pages/my/address')), 'addressList')
+const addressDetail = r => require.ensure([], () => r(require('@/pages/my/address/detail')), 'addressDetail')
 const orderList = r => require.ensure([], () => r(require('@/pages/my/order')), 'orderList')
 const detail = r => require.ensure([], () => r(require('@/pages/my/order/detail')), 'detail')
 const prizeList = r => require.ensure([], () => r(require('@/pages/my/prize')), 'prizeList')
@@ -71,18 +72,27 @@ const routes = [{
     meta: {
         title: '收货地址'
     }
-},{
+}, {
+    path: '/address_detail',
+    component: addressDetail,
+    meta: {
+        title: '收货地址'
+    }
+}, {
     path: '/detail',
     component: detail,
     meta: {
         title: '收货地址'
     }
-},{
-    path:'/prize_list',
-    component:prizeList,
-    meta:{
-        title:'奖品记录'
+}, {
+    path: '/prize_list',
+    component: prizeList,
+    meta: {
+        title: '奖品记录'
     }
+}, {
+    path: '/*',
+    redirect: '/everyday'
 }]
 
 let router = new Router({
