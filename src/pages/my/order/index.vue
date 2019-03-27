@@ -6,38 +6,34 @@
                     show-slider
                     inline
                     @click="clickHandler">
-                <cube-tab v-for="item in tabs" :label="item.label" :key="item.label">
-                    <!-- name为icon的插槽 -->
-                    <i slot="icon" :class="item.icon"></i>
-                    <!-- 默认插槽 -->
-                    {{item.label}}
-                </cube-tab>
+                <cube-tab v-for="item in tabs" :label="item.label" :key="item.label"></cube-tab>
             </cube-tab-bar>
         </div>
         <ul>
-            <li class="order-card">
+            <li class="order-card" v-for="item in orderList">
                 <div class="order-card-top">
                     <div class="order-card-top-content">
                         <div class="img">
-                            <img :src="banner" alt="">
+                            <img :src="item.img" alt="图片">
                         </div>
                         <div class="content">
-                            <p class="pro-desc">【限时7折】多美洁Tropiclean
-                                天然清新口气 饮水添加剂...</p>
-                            <p class="num-color">2只装 黑色+白色</p>
+                            <p class="pro-desc">{{item.desc}}</p>
+                            <!--<p class="num-color">2只装 黑色+白色</p>-->
                         </div>
                         <div class="right-text">
-                            <p class="status">交易成功</p>
-                            <p class="unit-price">￥<i>125.0</i></p>
-                            <p class="num">*<i>1</i></p>
+                            <p class="status">{{{0:'交易成功',1:'已发货',2:'已收货'}[item.status]}}</p>
+                            <p class="unit-price">￥<span>{{item.danjia}}</span></p>
+                            <p class="num">*<span>{{item.count}}</span></p>
                         </div>
                     </div>
-                    <p class="desc">共一件商品 合计：<span>￥：<i>125.0</i></span></p>
+                    <p class="desc">
+                        <span>共{{item.count}}件</span>
+                    </p>
                 </div>
                 <div class="order-card-bottom">
                     <div class="logistics-number">
                         <span>物流编号:</span>
-                        <span>20171224526879</span>
+                        <span>{{item.wuliubianhao}}</span>
                     </div>
                     <button class="button button-default xs is-plain">再次购买</button>
                 </div>
@@ -51,20 +47,44 @@
         name: "index",
         data() {
             return {
+                orderList: [{
+                    img: 'http://pic13.nipic.com/20110306/2804945_123841419000_2.jpg',
+                    status: 0,
+                    desc: '显示交付到三分反倒龙帆积分老三肯赛浮动额敏',
+                    danjia: 125,
+                    count: 1,
+                    zongjia: 123,
+                    wuliubianhao: '4738274',
+                    anniuzhi: '确认收货'
+                }, {
+                    img: 'http://pic13.nipic.com/20110306/2804945_123841419000_2.jpg',
+                    status: 0,
+                    desc: '显示交付到三分反倒龙帆积分老三肯赛浮动额敏',
+                    danjia: 125,
+                    count: 1,
+                    zongjia: 123,
+                    wuliubianhao: '4738274',
+                    anniuzhi: '确认收货'
+                }, {
+                    img: 'http://pic13.nipic.com/20110306/2804945_123841419000_2.jpg',
+                    status: 0,
+                    desc: '显示交付到三分反倒龙帆积分老三肯赛浮动额敏',
+                    danjia: 125,
+                    count: 1,
+                    zongjia: 123,
+                    wuliubianhao: '4738274',
+                    anniuzhi: '确认收货'
+                }],
                 banner: 'http://pic13.nipic.com/20110306/2804945_123841419000_2.jpg',
                 selectedLabelSlots: '全部',
                 tabs: [{
                     label: '全部',
-                    // icon: 'cubeic-home'
                 }, {
                     label: '待付款',
-                    // icon: 'cubeic-like'
                 }, {
                     label: '待发货',
-                    // icon: 'cubeic-vip'
                 }, {
                     label: '待收货',
-                    // icon: 'cubeic-person'
                 }]
             }
         },
@@ -73,9 +93,6 @@
             // if you clicked home tab, then print 'Home'
             // console.log(label)
             // }
-        },
-        components: {
-            // appHead
         }
     }
 </script>
@@ -108,7 +125,7 @@
             .order-card {
                 background-color: $white;
                 border-radius: 6px;
-
+                margin-bottom: 10px;
                 .order-card-top {
                     padding: 17px 11px 15px 10px;
                     border-bottom: 1px solid $black12;

@@ -61,11 +61,16 @@ const routes = [{
         title: '我的'
     }
 }, {
-    path: '/order',
+    path: '/order_list',
     component: orderList,
     meta: {
         title: '我的订单'
-
+    }
+}, {
+    path: '/order_detail',
+    component: orderDetail,
+    meta: {
+        title: '收货地址'
     }
 }, {
     path: '/address_list',
@@ -78,12 +83,6 @@ const routes = [{
     component: addressDetail,
     meta: {
         title: '收货地址详情'
-    }
-}, {
-    path: '/detail',
-    component: orderDetail,
-    meta: {
-        title: '收货地址'
     }
 }, {
     path: '/prize_list',
