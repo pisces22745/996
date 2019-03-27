@@ -33,56 +33,102 @@
 
 <script>
 
-    export default {
-        name: 'address_list',
-        data() {
-            return {
-                addressList: [{
-                    id: 1,
-                    name: '羊羊羊',
-                    mobile: '18090909090',
-                    province: '浙江省',
-                    city: '杭州市',
-                    area: '桐庐县',
-                    address: 'xxxxxx',
-                    isDefault: 0
-                }, {
-                    id: 1,
-                    name: '羊羊羊',
-                    mobile: '18090909090',
-                    province: '浙江省',
-                    city: '杭州市',
-                    area: '桐庐县',
-                    address: 'xxxxxx',
-                    isDefault: 1
-                }, {
-                    id: 1,
-                    name: '羊羊羊',
-                    mobile: '18090909090',
-                    province: '浙江省',
-                    city: '杭州市',
-                    area: '桐庐县',
-                    address: 'xxxxxx',
-                    isDefault: 1
-                }],
-            }
-        },
-        methods: {
-            goDetail(id) {
-                this.$router.push({
-                    path: 'address_detail',
-                    query: {id}
-                })
-            },
-            setDefault(id, isDefault) {
-            },
-            delAddress(id) {
-            }
-        },
-        mounted() {
-
+export default {
+    name: 'address_list',
+    data () {
+        return {
+            addressList: [{
+                id: 1,
+                name: '羊羊羊',
+                mobile: '18090909090',
+                province: '浙江省',
+                city: '杭州市',
+                area: '桐庐县',
+                address: 'xxxxxx',
+                isDefault: 0
+            }, {
+                id: 1,
+                name: '羊羊羊',
+                mobile: '18090909090',
+                province: '浙江省',
+                city: '杭州市',
+                area: '桐庐县',
+                address: 'xxxxxx',
+                isDefault: 0
+            }, {
+                id: 1,
+                name: '羊羊羊',
+                mobile: '18090909090',
+                province: '浙江省',
+                city: '杭州市',
+                area: '桐庐县',
+                address: 'xxxxxx',
+                isDefault: 0
+            }, {
+                id: 1,
+                name: '羊羊羊',
+                mobile: '18090909090',
+                province: '浙江省',
+                city: '杭州市',
+                area: '桐庐县',
+                address: 'xxxxxx',
+                isDefault: 0
+            }, {
+                id: 1,
+                name: '羊羊羊',
+                mobile: '18090909090',
+                province: '浙江省',
+                city: '杭州市',
+                area: '桐庐县',
+                address: 'xxxxxx',
+                isDefault: 0
+            }, {
+                id: 1,
+                name: '羊羊羊',
+                mobile: '18090909090',
+                province: '浙江省',
+                city: '杭州市',
+                area: '桐庐县',
+                address: 'xxxxxx',
+                isDefault: 0
+            }, {
+                id: 1,
+                name: '羊羊羊',
+                mobile: '18090909090',
+                province: '浙江省',
+                city: '杭州市',
+                area: '桐庐县',
+                address: 'xxxxxx',
+                isDefault: 1
+            }, {
+                id: 1,
+                name: '羊羊羊',
+                mobile: '18090909090',
+                province: '浙江省',
+                city: '杭州市',
+                area: '桐庐县',
+                address: 'xxxxxx',
+                isDefault: 1
+            }],
         }
+    },
+    methods: {
+        goDetail (id) {
+            this.$router.push({
+                path: 'address_detail',
+                query: {id}
+            })
+        },
+        setDefault (id, isDefault) {
+
+        },
+        delAddress (id) {
+        }
+    },
+    mounted () {
+
     }
+}
 </script>
 
 <style lang="scss">
@@ -90,40 +136,52 @@
 
     .address-list-wrapper {
         .address-list {
+            margin-bottom: 50px;
             padding: 10px 14px;
             color: $black2;
+
             & > li {
                 margin-bottom: 10px;
                 background-color: $white;
                 border-radius: 4px;
                 font-size: 13px;
+
                 .top {
                     padding: 15px;
                     border-bottom: 1px solid $black12;
+
                     .name {
                         margin-right: 10px;
                     }
+
                     p {
                         margin-top: 4px;
                         color: $black3;
                     }
                 }
+
                 .bottom {
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
                     padding: 15px;
+
                     .iconfont {
                         font-size: 21px;
+                        margin-right: 4px;
+
                         &.icon-gou {
                             color: $yellow1;
                         }
                     }
+
                     i, span {
                         vertical-align: middle;
                     }
+
                     li {
                         display: inline-block;
+
                         &:first-child {
                             margin-right: 18px;
                         }
@@ -131,6 +189,7 @@
                 }
             }
         }
+
         button {
             position: fixed;
             bottom: 0;

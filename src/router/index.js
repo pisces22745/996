@@ -13,13 +13,14 @@ const my = r => require.ensure([], () => r(require('@/pages/my')), 'my')
 const addressList = r => require.ensure([], () => r(require('@/pages/my/address')), 'addressList')
 const addressDetail = r => require.ensure([], () => r(require('@/pages/my/address/detail')), 'addressDetail')
 const orderList = r => require.ensure([], () => r(require('@/pages/my/order')), 'orderList')
-const detail = r => require.ensure([], () => r(require('@/pages/my/order/detail')), 'detail')
+const orderDetail = r => require.ensure([], () => r(require('@/pages/my/order/detail')), 'orderDetail')
 const prizeList = r => require.ensure([], () => r(require('@/pages/my/prize')), 'prizeList')
 
 const routes = [{
     path: '/',
     component: index,
     meta: {
+        auth: false,
         title: '商城'
     }
 }, {
@@ -76,11 +77,11 @@ const routes = [{
     path: '/address_detail',
     component: addressDetail,
     meta: {
-        title: '收货地址'
+        title: '收货地址详情'
     }
 }, {
     path: '/detail',
-    component: detail,
+    component: orderDetail,
     meta: {
         title: '收货地址'
     }

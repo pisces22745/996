@@ -11,5 +11,4 @@ for (let i = 0; i < provinceList.length; i++) {
     }
     cascadeData.push(province)
 }
-//
-export default cascadeData
+export {cascadeData}
