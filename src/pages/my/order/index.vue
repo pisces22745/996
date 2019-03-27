@@ -11,32 +11,34 @@
         </div>
         <ul>
             <li class="order-card" v-for="item in orderList">
-                <div class="order-card-top">
-                    <div class="order-card-top-content">
-                        <div class="img">
-                            <img :src="item.img" alt="图片">
+                <router-link to="/order_detail">
+                    <div class="order-card-top">
+                        <div class="order-card-top-content">
+                            <div class="img">
+                                <img :src="item.img" alt="图片">
+                            </div>
+                            <div class="content">
+                                <p class="pro-desc">{{item.desc}}</p>
+                                <!--<p class="num-color">2只装 黑色+白色</p>-->
+                            </div>
+                            <div class="right-text">
+                                <p class="status">{{{0:'交易成功',1:'已发货',2:'已收货'}[item.status]}}</p>
+                                <p class="unit-price">￥<span>{{item.danjia}}</span></p>
+                                <p class="num">*<span>{{item.count}}</span></p>
+                            </div>
                         </div>
-                        <div class="content">
-                            <p class="pro-desc">{{item.desc}}</p>
-                            <!--<p class="num-color">2只装 黑色+白色</p>-->
-                        </div>
-                        <div class="right-text">
-                            <p class="status">{{{0:'交易成功',1:'已发货',2:'已收货'}[item.status]}}</p>
-                            <p class="unit-price">￥<span>{{item.danjia}}</span></p>
-                            <p class="num">*<span>{{item.count}}</span></p>
-                        </div>
+                        <p class="desc">
+                            <span>共{{item.count}}件</span>
+                        </p>
                     </div>
-                    <p class="desc">
-                        <span>共{{item.count}}件</span>
-                    </p>
-                </div>
-                <div class="order-card-bottom">
-                    <div class="logistics-number">
-                        <span>物流编号:</span>
-                        <span>{{item.wuliubianhao}}</span>
+                    <div class="order-card-bottom">
+                        <div class="logistics-number">
+                            <span>物流编号:</span>
+                            <span>{{item.wuliubianhao}}</span>
+                        </div>
+                        <button class="button button-default xs is-plain">再次购买</button>
                     </div>
-                    <button class="button button-default xs is-plain">再次购买</button>
-                </div>
+                </router-link>
             </li>
         </ul>
     </div>
@@ -89,10 +91,9 @@
             }
         },
         methods: {
-            // clickHandler (label) {
-            // if you clicked home tab, then print 'Home'
-            // console.log(label)
-            // }
+            clickHandler(label) {
+                window.console.log(label)
+            }
         }
     }
 </script>

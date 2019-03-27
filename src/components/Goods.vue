@@ -7,7 +7,7 @@
                     <div class="img-wrapper">
                         <img :src="item.img" alt="商品图片">
                     </div>
-                    <div class="item-bottom">
+                    <div class="item-bottom" :class="{'list-dart':listDart}">
                         <div class="desc">{{item.desc}}</div>
                         <div class="status clearfix"><span class="fl">{{'限时特惠'}}</span></div>
                         <div class="price">￥{{item.price}}</div>
@@ -19,14 +19,15 @@
 </template>
 
 <script>
-export default {
-    name: 'Goods',
-    props: {
-        title: String,
-        goodList: Array,
-        dark: Boolean
+    export default {
+        name: 'Goods',
+        props: {
+            title: String,
+            goodList: Array,
+            dark: Boolean,
+            listDart: Boolean
+        }
     }
-}
 </script>
 
 <style lang="scss">
@@ -83,7 +84,9 @@ export default {
 
                     .item-bottom {
                         padding: 10px;
-
+                        &.list-dart {
+                            background-color: $black7;
+                        }
                         .desc {
                             font-size: 13px;
                             line-height: 1.3;

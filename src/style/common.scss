@@ -39,6 +39,7 @@ body {
   border-radius: 15px;
   font-size: 13px;
   outline: none;
+  text-align: center;
   transition: all .2s;
   &.xs {
     height: 25px;
@@ -64,6 +65,12 @@ body {
     height: 50px;
     line-height: 50px;
     border-radius: 0;
+    font-size: 17px;
+  }
+  &.fix {
+    position: fixed;
+    bottom: 0;
+    right: 0;
   }
   &.button-primary {
     background-color: $yellow3;

@@ -3,7 +3,8 @@ import Router from 'vue-router'
 // import store from '../store'
 
 Vue.use(Router)
-const index = r => require.ensure([], () => r(require('@/pages/goods')), 'goods')
+const index = r => require.ensure([], () => r(require('@/pages/goods')), 'goodList')
+const goodDetail = r => require.ensure([], () => r(require('@/pages/goods/detail')), 'goodDetail')
 const login = r => require.ensure([], () => r(require('@/pages/login')), 'login')
 const register = r => require.ensure([], () => r(require('@/pages/register')), 'register')
 const wheel = r => require.ensure([], () => r(require('@/pages/activity/wheel')), 'wheel')
@@ -15,6 +16,7 @@ const addressDetail = r => require.ensure([], () => r(require('@/pages/my/addres
 const orderList = r => require.ensure([], () => r(require('@/pages/my/order')), 'orderList')
 const orderDetail = r => require.ensure([], () => r(require('@/pages/my/order/detail')), 'orderDetail')
 const prizeList = r => require.ensure([], () => r(require('@/pages/my/prize')), 'prizeList')
+const paySuccess = r => require.ensure([], () => r(require('@/pages/pay/success')), 'paySuccess')
 
 const routes = [{
     path: '/',
@@ -22,6 +24,13 @@ const routes = [{
     meta: {
         auth: false,
         title: '商城'
+    }
+}, {
+    path: '/good_detail',
+    component: goodDetail,
+    meta: {
+        auth: false,
+        title: '商品详情'
     }
 }, {
     path: '/login',
@@ -87,6 +96,12 @@ const routes = [{
 }, {
     path: '/prize_list',
     component: prizeList,
+    meta: {
+        title: '奖品记录'
+    }
+}, {
+    path: '/pay_success',
+    component: paySuccess,
     meta: {
         title: '奖品记录'
     }
