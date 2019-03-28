@@ -22,7 +22,7 @@
                                 <!--<p class="num-color">2只装 黑色+白色</p>-->
                             </div>
                             <div class="right-text">
-                                <p class="status">{{{0:'交易成功',1:'已发货',2:'已收货'}[item.status]}}</p>
+                                <p class="status">{{{0:'交易成功',1:'待发货',2:'已发货'}[item.status]}}</p>
                                 <p class="unit-price">￥<span>{{item.danjia}}</span></p>
                                 <p class="num">*<span>{{item.count}}</span></p>
                             </div>
@@ -36,7 +36,7 @@
                             <span>物流编号:</span>
                             <span>{{item.wuliubianhao}}</span>
                         </div>
-                        <button class="button button-default xs is-plain">再次购买</button>
+                        <button class="button button-default xs is-plain">{{{0:'再次购买',1:'退货退款',2:'确认收货'}[item.status]}}</button>
                     </div>
                 </router-link>
             </li>

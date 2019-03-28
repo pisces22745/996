@@ -17,6 +17,7 @@ const orderList = r => require.ensure([], () => r(require('@/pages/my/order')), 
 const orderDetail = r => require.ensure([], () => r(require('@/pages/my/order/detail')), 'orderDetail')
 const prizeList = r => require.ensure([], () => r(require('@/pages/my/prize')), 'prizeList')
 const paySuccess = r => require.ensure([], () => r(require('@/pages/pay/success')), 'paySuccess')
+const coupon = r => require.ensure([], () => r(require('@/pages/my/coupon')), 'coupon')
 
 const routes = [{
     path: '/',
@@ -24,6 +25,13 @@ const routes = [{
     meta: {
         auth: false,
         title: '商城'
+    }
+},{
+    path: '/coupon',
+    component: coupon,
+    meta: {
+        auth: false,
+        title: '优惠券'
     }
 }, {
     path: '/good_detail',

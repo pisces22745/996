@@ -8,7 +8,7 @@
                     </div>
                     <div class="desc">
                         <p class="desc-top">红小胖同款加菲猫活体 纯种异国短毛猫宠物猫咪猫咪猫咪猫咪滑板鞋</p>
-                        <p class="desc-bottom">2只装 黑色+白色   数量：1</p>
+                        <!--<p class="desc-bottom">2只装 黑色+白色   数量：1</p>-->
                     </div>
                 </div>
                 <div class="li-bottom">
@@ -28,7 +28,12 @@
 
 <script>
     export default {
-        name: "prize"
+        name: "prize",
+        data(){
+            return{
+
+            }
+        }
     }
 </script>
 
